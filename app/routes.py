@@ -16,3 +16,6 @@ def index():
         }
     ]
     return render_template('index.html', title='Home', user=user, posts=posts)
+@app.route('/old_chess')
+def old_chess():
+    return render_template('old_chess_site.html')
