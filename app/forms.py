@@ -7,3 +7,9 @@ class LoginForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     remember_me = BooleanField('Remember Me')
     submit = SubmitField('Sign In')
+
+class snowmanForm(FlaskForm):
+	guess1 = StringField('Guess 1', validators=[DataRequired()])
+	guess2 = StringField('Guess 2', validators=[DataRequired()])
+	guess3 = StringField('Guess 3', validators=[DataRequired()])
+	submit = SubmitField('Submit Guesses')

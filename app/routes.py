@@ -39,3 +39,7 @@ def login():
             form.username.data, form.remember_me.data))
         return redirect(url_for('index'))
     return render_template('login.html', title='Sign In', form=form)
+@app.route('/snowman', methods=['GET', 'POST'])
+def snowman():
+    form = snowmanForm()
+    return render_template('snowman.html', title='Submit Guesses', form=form)
